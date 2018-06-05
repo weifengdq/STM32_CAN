@@ -35,7 +35,9 @@ Clock Configuration选项卡配置如下:
 Configuration选项卡配置如下:  
 ![cube3](/Assets/cube3.png)  
 
-CAN挂在APB1时钟上, CAN波特率 36M/Pre/(BS1+BS2+SJW) = 36M/3/(5+6+1) = 1Mbps, 刚好对应图中 Time for one Bit 的 1000ns.  
+![cube4](/Assets/cube4.png)  
+
+CAN挂在APB1时钟上, CAN波特率 36M/Pre/(BS1+BS2+SJW) = 36M/3/(5+6+1) = 1Mbps, 刚好对应图中 Time for one Bit 的 1000ns. 要用FIFO0的接收中断, 所以USB low priority or CAN RX0 interrupts 这个勾上.  
 
 main.c中主要添加的代码如下:  
 
